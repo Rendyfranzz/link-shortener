@@ -1,6 +1,6 @@
 import prisma from "../../prisma/prisma"
 
-export default async (req, res) => {
+export default async function (req, res) {
   let { originalLink, customLink } = req.body.data
   if(!customLink){
     customLink = Math.random().toString(36).substring(2,8)

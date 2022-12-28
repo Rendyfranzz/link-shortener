@@ -18,7 +18,7 @@ export const Form = () => {
         updateOriginalLink(value.originalLink)
         if(valid){
             try{
-                const response = await axios.post("/api/addLink",{
+                const response = await axios.post("/api/add",{
                     data:value
                 })
                 router.push(`/result/${response.data.customLink}`)

@@ -24,6 +24,7 @@ export const Form = () => {
                 router.push(`/result/${response.data.customLink}`)
             }catch(err){
                 if (err.response) {
+                    console.log(err.response);
                     alert(err.response.data.msg)
                 }
             }
